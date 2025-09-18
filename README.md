@@ -22,6 +22,7 @@ nest --version
 npm i -D prettier eslint-config-prettier
 
 
+# Iniciando o Nest
 
 # Passo 1
 npm i -g @nestjs/cli
@@ -62,6 +63,8 @@ npm i @prisma/client
 npm i -D prisma  (Forma alternativa -> ' npm install --save-dev prisma ')
 
 
+
+# Passo 8 - Com o Docker aberto, execute o comando:  (subir o container para o docker)
 docker compose up -d
 
 
