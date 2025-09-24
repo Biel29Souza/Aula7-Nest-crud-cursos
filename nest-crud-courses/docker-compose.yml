@@ -1,20 +1,19 @@
 version: '3.9'
 services:
   db:
-    image: mysql:8.0
-    container_name: nest_crud_mysql
+    image: postgres:16
+    container_name: nest_crud_pg
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: nest_crud
-      MYSQL_USER: nest
-      MYSQL_PASSWORD: nest
+      POSTGRES_DB: nest_crud
+      POSTGRES_USER: nest
+      POSTGRES_PASSWORD: nest1
     
     ports:
-      - "3306:3306"  # Porta padrão do MySQL
+      - "3306:5432"  # Porta padrão do MySQL
     volumes:
-      - mysql_data:/var/lib/mysql  
+      - pgdata_data:/var/lib/poatgresql/data  
 
 volumes:
-  mysql_data:  
+  pgdata_data:  
 
